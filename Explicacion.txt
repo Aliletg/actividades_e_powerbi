@@ -1,0 +1,29 @@
+Este proyecto es una solución integral de Business Intelligence diseñada para procesar, transformar y visualizar datos relacionados con actividades extracurriculares. El flujo abarca desde la extracción de datos crudos hasta la generación de insights estratégicos.
+
+Componentes del Proyecto
+1. Proceso ETL (Pentaho)
+Archivo: ACTIVIDADES EXTRACURRICULARES_PENTAHO.ktr
+
+¿Qué hace?: Es el motor del proyecto. Este archivo de transformación de Pentaho Data Integration (PDI) se conecta a las fuentes de datos originales, realiza la limpieza (limpia nulos, estandariza formatos de fecha) y aplica las reglas de negocio necesarias para dejar los datos listos para el análisis.
+
+Cómo correrlo: Requiere tener instalado Pentaho (Spoon). Se debe abrir el archivo .ktr y configurar las conexiones de base de datos o rutas de archivos locales antes de ejecutar.
+
+2. Reporte Interactivo (Power BI)
+Archivo: ACTIVIDADES_EXTRACURRICULARES_POWERBI.pbix
+
+¿Qué hace?: Es la capa de visualización. Aquí se importan los datos ya procesados por Pentaho. Contiene el modelo de datos, las medidas DAX (como conteo de alumnos, horas totales, etc.) y los dashboards interactivos para la toma de decisiones.
+
+Cómo correrlo: Se abre con Power BI Desktop. Solo asegúrate de actualizar la ruta del origen de datos para que apunte a la salida generada por el proceso ETL de Pentaho.
+
+3. Documentación Técnica
+Archivo: DOCUMENTACION DE ACTIVIDADES EXTRACURRICULARES.pdf
+
+¿Qué hace?: Contiene el sustento teórico y técnico del proyecto. Aquí se detallan los objetivos, el diccionario de datos, el diseño del modelo estrella (si aplica) y las instrucciones detalladas de mantenimiento.
+
+
+Pasos para ejecutar el flujo completo
+Ejecutar el ETL: Abre el archivo .ktr en Pentaho y lánzalo para generar el conjunto de datos limpio.
+
+Actualizar Power BI: Abre el .pbix, ve a la pestaña de "Transformar Datos" y actualiza la ruta del origen para que lea el archivo que generaste en el paso anterior.
+
+Visualizar: ¡Listo! Ya puedes explorar los indicadores en el reporte.
